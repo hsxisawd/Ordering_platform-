@@ -1,0 +1,9 @@
+anyjson==0.3.3
+booleano==1.1a2
+Django==4.1
+GDAL==3.4.3
+osgeo==0.0.1
+Pillow==9.2.0
+requests==2.22.0
+Shapely==1.8.1.post1
+sphinx_rtd_theme==1.0.0

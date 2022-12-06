@@ -1,0 +1,32 @@
+{% extends "myadmin/base.html" %}
+
+{% block main_body %}
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <h4>
+            信息提示:
+        </h4>
+    </section>
+
+    <div class="pad margin no-print">
+        <div class="callout callout-info" style="margin-bottom: 0!important;padding-left: 50px">
+            <h3><i class="fa fa-exclamation-triangle"></i>{{ info }}</h3>
+        </div>
+    </div>
+    <div class="box-footer">
+        <div class="col-sm-offset-2 col-sm-10">
+            {% if info4 == "店铺页面" %}
+            <a type="submit" href="{% url 'myadmin_shop_index' 1 %}" class="btn btn-primary">返回{{info4}}</a>
+            {% elif info4 == "员工页面" %}
+            <a type="submit" href="{% url 'myadmin_user_index' 1 %}" class="btn btn-primary">返回{{info4}}</a>
+            {% elif info4 == "菜品类别页面" %}
+            <a type="submit" href="{% url 'myadmin_category_index' 1 %}" class="btn btn-primary">返回{{info4}}</a>
+            {% elif info4 == "菜品信息页面" %}
+            <a type="submit" href="{% url 'myadmin_product_index' 1 %}" class="btn btn-primary">返回{{info4}}</a>
+            {% endif %}
+            {% if info1 != "" %}
+            <a type="submit" href="{{ info2 }}" class="btn btn-default">返回{{ info1 }}</a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}
